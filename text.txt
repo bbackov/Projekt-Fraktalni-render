@@ -1,0 +1,10 @@
+g++ src/main.cpp src/glad.c \
+external/imgui/imgui.cpp \
+external/imgui/imgui_draw.cpp \
+external/imgui/imgui_tables.cpp \
+external/imgui/imgui_widgets.cpp \
+external/imgui/backends/imgui_impl_glfw.cpp \
+external/imgui/backends/imgui_impl_opengl3.cpp \
+-Iinclude -Iexternal/imgui -Iexternal/imgui/backends \
+-Llibs -lglfw3 -lopengl32 -lgdi32 \
+-o fraktal.exe

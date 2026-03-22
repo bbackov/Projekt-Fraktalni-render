@@ -1,0 +1,38 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build (MSYS2 MinGW64)",
+      "type": "shell",
+      "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+      "args": [
+        "src/main.cpp",
+        "src/glad.c",
+
+        "external/imgui/imgui.cpp",
+        "external/imgui/imgui_draw.cpp",
+        "external/imgui/imgui_tables.cpp",
+        "external/imgui/imgui_widgets.cpp",
+        "external/imgui/backends/imgui_impl_glfw.cpp",
+        "external/imgui/backends/imgui_impl_opengl3.cpp",
+
+        "-Iinclude",
+        "-Iexternal/imgui",
+        "-Iexternal/imgui/backends",
+
+        "-lglfw3",
+        "-lopengl32",
+
+        "-o",
+        "fraktal.exe"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
